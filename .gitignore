@@ -5,6 +5,7 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+[Dd]ebug.app/
 
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta

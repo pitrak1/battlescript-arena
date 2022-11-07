@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MainController : MonoBehaviour {
-    // Start is called before the first frame update
+    public GameObject WorldGameObject;
+    
     void Start() {
-        Debug.Log(LevelLoader.GetLevel());
+        
     }
 
-    // Update is called once per frame
     void Update() {
-        
+        World worldScript = WorldGameObject.GetComponent<World>();
+        Debug.Log(worldScript.GetTile(new Vector2Int(0, 1)).GetComponent<Tile>().Type);
     }
 }

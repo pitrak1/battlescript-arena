@@ -26,9 +26,8 @@ public class Consts : MonoBehaviour
     };
 
     public static int TileHighlightOffset = -18;
-    public static int TileDiameter = 55;
-    public static int TileRowHeight = 40;
-    public static int TileRadius = 28;
+    public static double TileDiameter = 1;
+    public static double TileRowHeight = 0.72;
     public static double TileCornerSlope = 0.5;
     public static int IconWidth = 70;
 
