@@ -3,27 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Tile : MonoBehaviour {
-    public Sprite LowSprite;
-    public Sprite HighSprite;
-    public Sprite MiddleSprite;
-    public Sprite RockSprite;
-    public Sprite WaterSprite;
-    public Sprite TreeSprite;
+    private Dictionary<Consts.TileTypes, string> spriteMap = new Dictionary<Consts.TileTypes, string>() {
+        { Consts.TileTypes.Low, "Sprites/Tiles/Low" },
+        { Consts.TileTypes.High, "Sprites/Tiles/High" },
+        { Consts.TileTypes.Middle, "Sprites/Tiles/Middle" },
+        { Consts.TileTypes.Rock, "Sprites/Tiles/Rock" },
+        { Consts.TileTypes.Water, "Sprites/Tiles/Water" },
+        { Consts.TileTypes.Tree, "Sprites/Tiles/Tree" },
+    };
 
     public Consts.TileTypes Type;
 
     public void SetType(Consts.TileTypes type) {
         Type = type;
-        
-        Dictionary<Consts.TileTypes, Sprite> spriteMap = new Dictionary<Consts.TileTypes, Sprite>() {
-            { Consts.TileTypes.Low, LowSprite },
-            { Consts.TileTypes.High, HighSprite },
-            { Consts.TileTypes.Middle, MiddleSprite },
-            { Consts.TileTypes.Rock, RockSprite },
-            { Consts.TileTypes.Water, WaterSprite },
-            { Consts.TileTypes.Tree, TreeSprite },
-        };
-        
-        GetComponent<SpriteRenderer>().sprite = spriteMap[type];
+        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(spriteMap[type]);
     }
 }

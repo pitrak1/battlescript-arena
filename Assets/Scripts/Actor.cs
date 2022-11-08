@@ -3,34 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Actor : MonoBehaviour {
-    public Sprite DruidSprite;
-    public Sprite HunterSprite;
-    public Sprite MageSprite;
-    public Sprite PaladinSprite;
-    public Sprite PriestSprite;
-    public Sprite RogueSprite;
-    public Sprite ShamanSprite;
-    public Sprite WarlockSprite;
-    public Sprite WarriorSprite;
-    
-    public Consts.Characters Type { get; private set; }
+    private Dictionary<Consts.Characters, string> spriteMap = new Dictionary<Consts.Characters, string>() {
+        { Consts.Characters.Druid, "Sprites/Actors/Druid" },
+        { Consts.Characters.Hunter, "Sprites/Actors/Hunter" },
+        { Consts.Characters.Mage, "Sprites/Actors/Mage" },
+        { Consts.Characters.Paladin, "Sprites/Actors/Paladin" },
+        { Consts.Characters.Priest, "Sprites/Actors/Priest" },
+        { Consts.Characters.Rogue, "Sprites/Actors/Rogue" },
+        { Consts.Characters.Shaman, "Sprites/Actors/Shaman" },
+        { Consts.Characters.Warlock, "Sprites/Actors/Warlock" },
+        { Consts.Characters.Warrior, "Sprites/Actors/Warrior" }
+    };
+
+    public Consts.Characters Type;
 
     public void SetType(Consts.Characters type) {
         Type = type;
-        
-        Dictionary<Consts.Characters, Sprite> spriteMap = new Dictionary<Consts.Characters, Sprite>() {
-            { Consts.Characters.Druid, DruidSprite },
-            { Consts.Characters.Hunter, HunterSprite },
-            { Consts.Characters.Mage, MageSprite },
-            { Consts.Characters.Paladin, PaladinSprite },
-            { Consts.Characters.Priest, PriestSprite },
-            { Consts.Characters.Rogue, RogueSprite },
-            { Consts.Characters.Shaman, ShamanSprite },
-            { Consts.Characters.Warlock, WarlockSprite },
-            { Consts.Characters.Warrior, WarriorSprite }
-        };
-        
-        GetComponent<SpriteRenderer>().sprite = spriteMap[type];
+        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(spriteMap[type]);
     }
     
 }
