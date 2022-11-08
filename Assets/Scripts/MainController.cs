@@ -11,6 +11,6 @@ public class MainController : MonoBehaviour {
 
     void Update() {
         World worldScript = WorldGameObject.GetComponent<World>();
-        Debug.Log(worldScript.GetTile(new Vector2Int(0, 1)).GetComponent<Tile>().Type);
+        Debug.Log(worldScript.GetTile(new Vector2Int(2, 5)).GetComponent<Tile>().Type);
     }
 }
