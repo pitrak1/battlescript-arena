@@ -13,6 +13,18 @@ public class LevelLoader : MonoBehaviour {
     };
     
     public static List<List<Consts.TileTypes?>> GetLevel() {
+        string?[,] stringLevel = new string?[,] {
+            { null, null, "high", "mid", "low", "low", null, null, null },
+            { null, "rock", "high", "low", "low", "low", "low", null, null },
+            { "high", "high", "rock", "low", "water", "tree", "low", "low", null },
+            { "mid", "low", "low", "low", "low", "water", "tree", "low", "low" },
+            { "low", "low", "water", "low", "tree", "low", "water", "low", "low" },
+            { "low", "low", "tree", "water", "low", "low", "low", "low", "mid" },
+            { null, "low", "low", "tree", "water", "low", "rock", "high", "high" },
+            { null, null, "low", "low", "low", "low", "high", "rock", null },
+            { null, null, null, "low", "low", "mid", "high", null, null }
+        };
+        
         // string?[,] stringLevel = new string?[,] {
         //     { null, null, "high", "mid", "low", "low", null, null, null },
         //     { null, "rock", "high", "low", "low", "low", "low", null, null },
@@ -25,18 +37,12 @@ public class LevelLoader : MonoBehaviour {
         //     { null, null, null, "low", "low", "mid", "high", null, null }
         // };
 
-        int levelSize = 3;
-        
-        string?[,] stringLevel = new string?[,] {
-            { "low", "low", "low"},
-            { "tree", "high", "rock"},
-            { "low", "low", "low"}
-        };
+        int levelSize = 9;
 
         List<List<Consts.TileTypes?>> tileLevel = new List<List<Consts.TileTypes?>>();
         for (int j = 0; j < levelSize; j++) {
             tileLevel.Add(new List<Consts.TileTypes?>());
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < levelSize; i++) {
                 if (stringLevel[j, i] is null) {
                     tileLevel[j].Add(null);
                 }

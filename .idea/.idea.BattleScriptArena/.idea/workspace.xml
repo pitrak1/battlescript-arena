@@ -65,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667785530868</updated>
-      <workItem from="1667785537204" duration="10334000" />
+      <workItem from="1667785537204" duration="12928000" />
     </task>
     <servers />
   </component>
@@ -75,24 +75,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/World.cs</url>
-          <line>26</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/World.cs" initialLine="26" containingFunctionPresentation="method 'GetTile'">
-            <startOffsets>
-              <option value="949" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1010" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
