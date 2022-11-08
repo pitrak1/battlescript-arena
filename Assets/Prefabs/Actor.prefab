@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2075204831287739750}
   - component: {fileID: 4392416659049882417}
+  - component: {fileID: 4986236056618570671}
   m_Layer: 0
   m_Name: Actor
   m_TagString: Untagged
@@ -89,3 +90,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4986236056618570671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641528840634974784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16385e7839e947fca1286e9e39845ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DruidSprite: {fileID: 21300000, guid: cc11dee00ec0140a1b16c5c2abf014c4, type: 3}
+  HunterSprite: {fileID: 21300000, guid: ad24e68b080e54e86a53ad0f0b62f2c3, type: 3}
+  MageSprite: {fileID: 21300000, guid: 87c4d3280913a4de2bcbb83dc02a9f99, type: 3}
+  PaladinSprite: {fileID: 21300000, guid: 79b344178df2940e99ae96ad2a7a2592, type: 3}
+  PriestSprite: {fileID: 21300000, guid: 6fdfff4e213ad4a91b4bb4be13cb900b, type: 3}
+  RogueSprite: {fileID: 21300000, guid: 3eb3430450c0044aa87f806b64d0d903, type: 3}
+  ShamanSprite: {fileID: 21300000, guid: b26d8c8cacf7b4755ab397a5c4ca9881, type: 3}
+  WarlockSprite: {fileID: 21300000, guid: c517f521591c54d94bdbdf1d2901a4a9, type: 3}
+  WarriorSprite: {fileID: 21300000, guid: 4802b8153d90948c1ab911153e3bd9a1, type: 3}
+  Type: 0

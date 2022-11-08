@@ -6,8 +6,10 @@ using UnityEngine;
 public class World : MonoBehaviour {
 
     public GameObject TilePrefab;
-    public GameObject ActorPrefab;
     public List<List<Tile>> Tiles = new List<List<Tile>>();
+    
+    public GameObject ActorPrefab;
+    public List<Actor> Actors = new List<Actor>();
 
     void Start() {
         List<List<Consts.TileTypes?>> tiles = LevelLoader.GetLevel();
@@ -30,13 +32,15 @@ public class World : MonoBehaviour {
             }
         }
         
-        AddActor(new Vector2Int(2, 2));
+        AddActor(new Vector2Int(2, 2), Consts.Characters.Warlock);
     }
 
-    public void AddActor(Vector2Int coordinates) {
+    public void AddActor(Vector2Int coordinates, Consts.Characters type) {
         Tile tile = GetTile(coordinates);
-        GameObject actor = Instantiate(ActorPrefab, new Vector3(0, 0, 0), Quaternion.identity, tile.transform);
-        actor.transform.localPosition = Vector3.zero;
+        GameObject actor = Instantiate(ActorPrefab, tile.transform.position, Quaternion.identity, tile.transform);
+        Actor script = actor.GetComponent<Actor>();
+        script.SetType(type);
+        Actors.Add(script);
     }
 
     public Tile GetTile(Vector2Int coordinates) {
