@@ -21,5 +21,4 @@ public class Actor : MonoBehaviour {
         Type = type;
         GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(spriteMap[type]);
     }
-    
 }

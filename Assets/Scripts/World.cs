@@ -31,16 +31,15 @@ public class World : MonoBehaviour {
                 }
             }
         }
-        
-        AddActor(new Vector2Int(2, 2), Consts.Characters.Warlock);
     }
 
-    public void AddActor(Vector2Int coordinates, Consts.Characters type) {
+    public Actor AddActor(Vector2Int coordinates, Consts.Characters type) {
         Tile tile = GetTile(coordinates);
         GameObject actor = Instantiate(ActorPrefab, tile.transform.position, Quaternion.identity, tile.transform);
         Actor script = actor.GetComponent<Actor>();
         script.SetType(type);
         Actors.Add(script);
+        return script;
     }
 
     public Tile GetTile(Vector2Int coordinates) {
