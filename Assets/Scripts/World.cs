@@ -18,7 +18,7 @@ public class World : MonoBehaviour {
             Tiles.Add(new List<Tile>());
             for (int i = 0; i < 9; i++) {
                 if (tiles[j][i] is not null) {
-                    Vector3 position = new Vector3(-4.5f + i - (j * 0.5f), 4.5f + -j * 0.72f, 0f);
+                    Vector3 position = new Vector3(-1.5f + i - (j * 0.5f), 3f + -j * 0.72f, 0f);
                     GameObject tile = Instantiate(TilePrefab, position, Quaternion.identity, transform);
                     SpriteRenderer renderer = tile.GetComponent<SpriteRenderer>();
                     renderer.sortingOrder = j;
